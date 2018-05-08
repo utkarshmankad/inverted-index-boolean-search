@@ -1,0 +1,46 @@
+Test Queries - 
+
+1) query - ( center and  location )
+['(', 'center', 'and', 'location', ')']
+The Docs against the query are - 
+[1, 2]
+
+2) query - ( center or profile )
+['(', 'center', 'or', 'profile', ')']
+The Docs against the query are - 
+[1, 2, 3, 5, 6]
+
+3) query - ( center not service )
+['(', 'center', 'not', 'service', ')']
+The Docs against the query are - 
+[5]
+
+4) query - ( ( center and location ) and department )
+['(', '(', 'center', 'and', 'location', ')', 'and', 'department', ')']
+The Docs against the query are - 
+[1, 2]
+
+5) query - ( ( center or department ) or location )
+['(', '(', 'center', 'or', 'department', ')', 'or', 'location', ')']
+The Docs against the query are - 
+[1, 2, 3, 4, 5, 6]
+
+6) query - ( ( center not profile ) not department )
+['(', '(', 'center', 'not', 'profile', ')', 'not', 'department', ')']
+The Docs against the query are - 
+[3, 5, 6]
+
+7) query - ( ( center and location ) or department )
+['(', '(', 'center', 'and', 'location', ')', 'or', 'department', ')']
+The Docs against the query are - 
+[1, 2, 4]
+
+8) query - ( ( center and location ) not department )
+['(', '(', 'center', 'and', 'location', ')', 'not', 'department', ')']
+The Docs against the query are - 
+[4]
+
+9) query - ( ( center or location ) not department )
+['(', '(', 'center', 'or', 'location', ')', 'not', 'department', ')']
+The Docs against the query are - 
+[3, 5, 6]
